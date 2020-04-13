@@ -1,0 +1,35 @@
+###
+1. Escreva uma função recursiva para calcular o valor de uma base x elevada a um expoente y. 
+2. Escrever uma função recursiva que retorna o tamanho de um string, tamstring(char s[]) 
+3. Fazer uma função recursiva que conta o número de ocorrências de um determinado caracter, caract(char c, char s[]) 
+4. Escreva uma função recursiva que produza o reverso de um string, reverse(char s[])
+5. Escreva uma função recursiva que imprime um número ao contrário.
+6. Escreva uma função recursiva que calcula a divisão de dois números inteiros positivos
+7. Escreva uma função recursiva para fazer uma busca sequencial de um elemento em um vetor.
+8. Escreva uma função que encontra o maior elemento de um vetor de n posições
+int maximo(int n, int v[])
+9. Escreva uma função recursiva que calcule a soma dos dígitos decimais de um inteiro estritamente positivo n. A soma dos dígitos de 132, por exemplo, é 6.
+
+10. Qual os valores impressos no código abaixo?
+#include <stdio.h>
+int funcRec(int x, int y){
+    if (x==1)
+        return y;
+    return 1 + funcRec(x-1, y+1);
+}
+
+int funcRec2(int n){
+    if(n==1 || n==2)
+        return 1;
+    return funcRec2(n-1)+funcRec2(n-2);
+}
+
+int main()
+{
+    int r;
+    r = funcRec(5,4);
+    printf("A funcao retorna = %d", r);
+    r = funcRec2(7);
+    printf("A funcao retorna = %d", r);
+    return 0;
+}

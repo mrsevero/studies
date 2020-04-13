@@ -1,60 +1,43 @@
-#include<iostream> 
-#include <list> 
-using namespace std; 
-  
-class Hash 
-{ 
-    int No;    // No. of Nos 
-  
-    list<int> *tabela; 
-public: 
-    Hash(int V);
-   
-    void insert(int x); 
-  
-    int index(int x) { 
-        return (x % No); 
-    } 
-  
-    void print(); 
-}; 
-  
-Hash::Hash(int b) 
-{ 
-    this->No = b; 
-    tabela = new list<int>[No]; 
-} 
-  
-void Hash::insert(int key) 
-{ 
-    int index = this->index(key); 
-    tabela[index].push_back(key);  
-} 
+#include <iostream>
+#include "TabHash.h"
 
-  
-void Hash::print() { 
-  for (int i = 0; i < No; i++) { 
-    cout << i; 
-    for (auto x : tabela[i]) 
-      cout << " --> " << x; 
-    cout << endl; 
-  } 
-} 
-  
- 
-int main() 
-{ 
- 
-  int a[] = {12, 5, 78, 0, 7}; 
-  int n = sizeof(a)/sizeof(a[0]); 
-  
+using namespace std;
 
-  Hash h(7); 
+int main() {
+  TabHash th(5);
 
-  for (int i = 0; i < n; i++)  
-    h.insert(a[i]);   
-  
-  h.print(); 
-  
-  return 0; 
-} 
+  while (true) {
+		cout << "\n0 - sair";
+		cout << "\n1 - inserir um elemento.";
+		cout << "\n2 - remover um elemento.";
+		cout << "\n3 - verificar se um determinado elemento esta' na tabela e informar sua posicao (indice do vetor + posicao na lista).";
+		cout << "\n4 - imprimir a tabela e tambem o total de elementos presentes na tabela.";
+		cout << "\n\nInforme sua opcao: ";
+		int opc;
+		cin >> opc;
+
+		if (opc == 0) {
+			break;
+		} else if (opc == 1) {
+			int opc1;
+			cout << "Valor do elemento: ";
+			cin >> opc1;
+      th.incluir(opc1);
+		} else if (opc == 2) {
+      int opc2;
+			cout << "Valor do elemento: ";
+			cin >> opc2;
+      cout << th.remover(opc2);
+		} else if(opc == 3) {
+			int opc3;
+			cout << "Valor do elemento: ";
+			cin >> opc3;
+      th.encontra(opc3);
+		} else if (opc == 4) {
+			cout << "\n\nImpressao dos elemento da lista -> ";
+			cout << th.imprimir();
+		}
+	}
+	cout << "\n\n\n-----  FIM  -----\n\n\n";
+	return 0;
+}
