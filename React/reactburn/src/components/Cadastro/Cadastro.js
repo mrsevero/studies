@@ -1,12 +1,16 @@
 import React from 'react';
 
+import Img from '../../images/logo.png';
+
 import "./Cadastro.css";
 
 const Cadastro = () => (
+<div>
+{/* aqui é o cadastro */}
 <div className="container">
+<img src={Img} id="logoCadastro"/> 
   <div className="row main">
     <div className="main-login main-center">
-      <h5>Cadastre-se para ter acesso a todos os nossos conteúdos</h5>
       <form className method="post" action="#">
         <div className="form-group">
           <label htmlFor="name" className="cols-sm-2 control-label">Nome</label>
@@ -54,6 +58,9 @@ const Cadastro = () => (
       </form>
     </div>
   </div>
+</div>
+
+{/* aqui termina */}
 </div>
 
 

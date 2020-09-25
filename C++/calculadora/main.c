@@ -19,7 +19,7 @@ fracao somaf(fracao um, fracao dois) {
 	} else
 		return soma;
 }
-fracao multf(fracao um, fracao dois) {
+fracao multiplicacao(fracao um, fracao dois) {
 	fracao mult;
 	mult.a = um.a * dois.a;
 	mult.b = um.b * dois.b;
@@ -31,7 +31,7 @@ fracao multf(fracao um, fracao dois) {
 		return mult;
 }
 
-fracao divf(fracao um, fracao dois) {
+fracao divisao(fracao um, fracao dois) {
 	fracao div;
 	div.a = um.a * dois.b;
 	div.b = um.b * dois.a;
@@ -43,7 +43,7 @@ fracao divf(fracao um, fracao dois) {
 		return div;
 }
 
-bool igualf(fracao um, fracao dois) {
+bool igualdade(fracao um, fracao dois) {
 	if (um.a * dois.b == um.b * dois.a) {
 		return true;
 	} else
@@ -51,27 +51,29 @@ bool igualf(fracao um, fracao dois) {
 }
 
 int main() {
-	fracao teste;
-	teste.a = 0;
-	teste.b = 3;
+	fracao fracaocliente;
+	fracaocliente.a = 0;
+	fracaocliente.b = 3;
 
-	fracao teste2;
-	teste2.a = 2;
-	teste2.b = 3;
+	fracao fracaocliente2;
+	fracaocliente2.a = 2;
+	fracaocliente2.b = 3;
 
-	fracao soma = somaf(teste, teste2);
-	fracao mult = multf(teste, teste2);
-	fracao div = divf(teste, teste2);
-	bool igual = igualf(teste, teste2);
-
+	fracao soma = somaf(fracaocliente, fracaocliente2);
 	printf("%d/", soma.a);
 	printf("%d \n", soma.b);
-
+	
+	fracao mult = multiplicacao(fracaocliente, fracaocliente2);
+	
 	printf("%d/", mult.a);
 	printf("%d \n", mult.b);
-
+	
+	fracao div = divisao(fracaocliente, fracaocliente2);
+	
 	printf("%d/", div.a);
 	printf("%d \n", div.b);
+	
+	bool igual = igualdade(fracaocliente, fracaocliente2);
 
 	printf("%d \n", igual);
 }

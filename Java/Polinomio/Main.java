@@ -1,19 +1,4 @@
-/*
-Entrega de trabalho - Nome do trabalho
 
-Nós,
-
-Bruno Severo Camilo      Tia:41781619
-
-
-
-declaramos que
-
-todas as respostas são fruto de nosso próprio trabalho,
-não copiamos respostas de colegas externos à equipe,
-não disponibilizamos nossas respostas para colegas externos à equipe e
-não realizamos quaisquer outras atividades desonestas para nos beneficiar ou prejudicar outros.
-*/
 class Main {
   public static void main(String[] args) {
     Polinomio Poli = new Polinomio(2);

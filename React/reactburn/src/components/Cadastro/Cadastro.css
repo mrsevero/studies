@@ -2,8 +2,17 @@ body{
     background-color:#565050;
   }
   
-  #logo {
-    width: 40%;
+  #logoCadastro {
+    width: 45%;
+    height: 45%;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #date{
+    text-align: center;
   }
   
   body, html{
@@ -67,8 +76,6 @@ body{
   .input-group-addon{
     -webkit-border-radius: 20px 20px 20px 20px;
     border-radius: 20px 20px 20px 20px;
-    width: 40px;
-    text-align: center;
     padding: 5% 4%;
   }
   
@@ -119,14 +126,12 @@ body{
   
   .login-register{
       font-size: 11px;
-      text-align: center;
   }
   
   #formFooter {
     background-color: #322A2A;
     border-top: 1px solid #5a4e4e;
     padding: 10px;
-    text-align: center;
     -webkit-border-radius: 0 0 20px 20px;
     border-radius: 0 0 20px 20px;
   }
@@ -137,8 +142,8 @@ body{
   .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
@@ -148,8 +153,6 @@ body{
     background-color: #DF9F45;
     border: none;
     color: white;
-    padding: 15px 80px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     text-transform: uppercase;
